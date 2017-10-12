@@ -22,8 +22,8 @@ class AboutHashes < Neo::Koan
 
   def test_accessing_hashes_with_fetch
     hash = { :one => "uno" }
-    assert_equal __, hash.fetch(:one)
-    assert_raise(___) do
+    assert_equal "uno", hash.fetch(:one)
+    assert_raise(Exception) do
       hash.fetch(:doesnt_exist)
     end
 
@@ -36,8 +36,8 @@ class AboutHashes < Neo::Koan
     hash = { :one => "uno", :two => "dos" }
     hash[:one] = "eins"
 
-    expected = { :one => __, :two => "dos" }
-    assert_equal __, hash
+    expected = { :one => "eins", :two => "dos" }
+    assert_equal expected, hash
 
     # Bonus Question: Why was "expected" broken out into a variable
     # rather than used as a literal?
