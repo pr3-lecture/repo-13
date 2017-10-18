@@ -35,7 +35,7 @@ class AboutStrings < Neo::Koan
     assert_equal true, a == c
   end
 
-  def test_flexible_quotes_can_handle_multiple_lines
+  def test_flexible_quotes_can_handle_multiple_lines #????????????
     long_string = %{
 It was the best of times,
 It was the worst of times.
@@ -45,7 +45,7 @@ It was the worst of times.
     assert_equal "\n", long_string[0,1]
   end
 
-  def test_here_documents_can_also_handle_multiple_lines
+  def test_here_documents_can_also_handle_multiple_lines #??????????????
     long_string = <<EOS
 It was the best of times,
 It was the worst of times.
@@ -91,7 +91,7 @@ EOS
     assert_equal "World", there
   end
 
-  def test_the_shovel_operator_modifies_the_original_string
+  def test_the_shovel_operator_modifies_the_original_string # ???????????
     original_string = "Hello, "
     hi = original_string
     there = "World"
@@ -106,7 +106,7 @@ EOS
 
   def test_double_quoted_string_interpret_escape_characters
     string = "\n"
-    assert_equal __, string.size
+    assert_equal 1, string.size
   end
 
   def test_single_quoted_string_do_not_interpret_escape_characters
