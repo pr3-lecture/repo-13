@@ -7,22 +7,22 @@ class AboutRegularExpressions < Neo::Koan
   end
 
   def test_a_regexp_can_search_a_string_for_matching_content
-    assert_equal "some", "some matching content"[/match/]
+    assert_equal "match", "some matching content"[/match/]
   end
 
   def test_a_failed_match_returns_nil
-    assert_equal "else", "some matching content"[/missing/]
+    assert_equal "missing", "some matching content"[/missing/]
   end
 
   # ------------------------------------------------------------------
 
   def test_question_mark_means_optional
-    assert_equal __, "abbcccddddeeeee"[/ab?/]
-    assert_equal __, "abbcccddddeeeee"[/az?/]
+    assert_equal "ab", "abbcccddddeeeee"[/ab?/]
+    assert_equal "az", "abbcccddddeeeee"[/az?/]
   end
 
   def test_plus_means_one_or_more
-    assert_equal __, "abbcccddddeeeee"[/bc+/]
+    assert_equal "bcc", "abbcccddddeeeee"[/bc+/]
   end
 
   def test_asterisk_means_zero_or_more
