@@ -74,15 +74,15 @@ class AboutRegularExpressions < Neo::Koan
   end
 
   def test_period_is_a_shortcut_for_any_non_newline_character
-    assert_equal __, "abc\n123"[/a.+/]
+    assert_equal "abc", "abc\n123"[/a.+/]
   end
 
   def test_a_character_class_can_be_negated
-    assert_equal __, "the number is 42"[/[^0-9]+/]
+    assert_equal "the number is ", "the number is 42"[/[^0-9]+/]
   end
 
   def test_shortcut_character_classes_are_negated_with_capitals
-    assert_equal __, "the number is 42"[/\D+/]
+    assert_equal "the number is ", "the number is 42"[/\D+/]
     assert_equal __, "space: \t\n"[/\S+/]
     # ... a programmer would most likely do
     assert_equal __, "variable_1 = 42"[/[^a-zA-Z0-9_]+/]
