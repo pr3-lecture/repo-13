@@ -102,15 +102,15 @@ class AboutRegularExpressions < Neo::Koan
   end
 
   def test_caret_anchors_to_the_start_of_lines
-    assert_equal __, "num 42\n2 lines"[/^\d+/]
+    assert_equal "2", "num 42\n2 lines"[/^\d+/]
   end
 
   def test_dollar_sign_anchors_to_the_end_of_lines
-    assert_equal __, "2 lines\nnum 42"[/\d+$/]
+    assert_equal "42", "2 lines\nnum 42"[/\d+$/]
   end
 
   def test_slash_b_anchors_to_a_word_boundary
-    assert_equal __, "bovine vines"[/\bvine./]
+    assert_equal "bovine", "bovine vines"[/\bvine./]
   end
 
   # ------------------------------------------------------------------
