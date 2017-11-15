@@ -152,30 +152,30 @@ EOS
 
   in_ruby_version("1.8") do
     def test_in_older_ruby_single_characters_are_represented_by_integers
-      assert_equal __, ?a
-      assert_equal __, ?a == 97
+      assert_equal "a", ?a
+      assert_equal "97", ?a == 97
 
-      assert_equal __, ?b == (?a + 1)
+      assert_equal "a1", ?b == (?a + 1)
     end
   end
 
   in_ruby_version("1.9", "2") do
     def test_in_modern_ruby_single_characters_are_represented_by_strings
-      assert_equal __, ?a
-      assert_equal __, ?a == 97
+      assert_equal "a", ?a
+      assert_equal false, ?a == 97
     end
   end
 
   def test_strings_can_be_split
     string = "Sausage Egg Cheese"
     words = string.split
-    assert_equal [__, __, __], words
+    assert_equal ["Sausage", "Egg", "Cheese"], words
   end
 
   def test_strings_can_be_split_with_different_patterns
     string = "the:rain:in:spain"
     words = string.split(/:/)
-    assert_equal [__, __, __, __], words
+    assert_equal ["the", "rain", "in", "spain"], words
 
     # NOTE: Patterns are formed from Regular Expressions.  Ruby has a
     # very powerful Regular Expression library.  We will become
@@ -191,7 +191,7 @@ EOS
     a = "a string"
     b = "a string"
 
-    assert_equal __, a           == b
-    assert_equal __, a.object_id == b.object_id
+    assert_equal true, a           == b
+    assert_equal false, a.object_id == b.object_id
   end
 end
