@@ -3,15 +3,15 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 class AboutRegularExpressions < Neo::Koan
   def test_a_pattern_is_a_regular_expression
-    assert_equal __, /pattern/.class
+    assert_equal Regexp, /pattern/.class
   end
 
   def test_a_regexp_can_search_a_string_for_matching_content
-    assert_equal __, "some matching content"[/match/]
+    assert_equal "some", "some matching content"[/match/]
   end
 
   def test_a_failed_match_returns_nil
-    assert_equal __, "some matching content"[/missing/]
+    assert_equal "else", "some matching content"[/missing/]
   end
 
   # ------------------------------------------------------------------
