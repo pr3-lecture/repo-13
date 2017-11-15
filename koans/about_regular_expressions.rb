@@ -85,8 +85,8 @@ class AboutRegularExpressions < Neo::Koan
     assert_equal "the number is ", "the number is 42"[/\D+/]
     assert_equal "space:", "space: \t\n"[/\S+/]
     # ... a programmer would most likely do
-    assert_equal "42", "variable_1 = 42"[/[^a-zA-Z0-9_]+/]
-    assert_equal "42", "variable_1 = 42"[/\W+/]
+    assert_equal " = ", "variable_1 = 42"[/[^a-zA-Z0-9_]+/]
+    assert_equal " = ", "variable_1 = 42"[/\W+/]
   end
 
   # ------------------------------------------------------------------
