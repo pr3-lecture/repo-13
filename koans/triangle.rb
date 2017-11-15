@@ -14,6 +14,15 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  if a==0 || b==0 || c==0
+  raise TriangleError, "Laenge kann nicht 0 sein!"
+end
+if a<0 || b<0 || c<0
+raise TriangleError, "Laenge kann nicht negativ sein!"
+end
+if a+b <= c || a+c <= b || b+c <= a
+raise TriangleError, "Die Laengen koennen kein Dreieck ergeben!"
+end
   if a == b && b == c
     return :equilateral
   end
