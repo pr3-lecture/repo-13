@@ -16,7 +16,7 @@ class AboutConstants < Neo::Koan
 
   def test_nested_constants_are_referenced_by_their_complete_path
     assert_equal "nested", AboutConstants::C
-    assert_equal "top level", ::AboutConstants::C
+    assert_equal "nested", ::AboutConstants::C
   end
 
   # ------------------------------------------------------------------
