@@ -14,9 +14,9 @@ class AboutExceptions < Neo::Koan
 
   def test_rescue_clause
     result = nil
-    begin
+    begin #try in Java
       fail "Oops"
-    rescue StandardError => ex
+    rescue StandardError => ex #catch in java
       result = :exception_handled
     end
 
