@@ -119,7 +119,7 @@ class AboutClasses < Neo::Koan
   end
 
   def test_args_to_new_must_match_initialize
-    assert_raise(___) do
+    assert_raise(ArgumentError) do
       Dog6.new
     end
     # THINK ABOUT IT:
@@ -130,7 +130,7 @@ class AboutClasses < Neo::Koan
     fido = Dog6.new("Fido")
     rover = Dog6.new("Rover")
 
-    assert_equal __, rover.name != fido.name
+    assert_equal true, rover.name != fido.name
   end
 
   # ------------------------------------------------------------------
@@ -159,17 +159,17 @@ class AboutClasses < Neo::Koan
     fido = Dog7.new("Fido")
 
     fidos_self = fido.get_self
-    assert_equal __, fidos_self
+    assert_equal Dog7, fidos_self
   end
 
   def test_to_s_provides_a_string_version_of_the_object
     fido = Dog7.new("Fido")
-    assert_equal __, fido.to_s
+    assert_equal "Fido", fido.to_s
   end
 
   def test_to_s_is_used_in_string_interpolation
     fido = Dog7.new("Fido")
-    assert_equal __, "My dog is #{fido}"
+    assert_equal "My dog is Fido", "My dog is #{fido}"
   end
 
   def test_inspect_provides_a_more_complete_string_version
