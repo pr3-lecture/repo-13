@@ -179,7 +179,7 @@ class AboutMessagePassing < Neo::Koan
     catcher = WellBehavedFooCatcher.new
 
     assert_equal true, catcher.respond_to?(:foo_bar)
-    assert_equal true, catcher.respond_to?(:something_else)
+    assert_equal false, catcher.respond_to?(:something_else)
   end
 
 end
