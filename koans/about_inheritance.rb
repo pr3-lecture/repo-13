@@ -48,7 +48,7 @@ class AboutInheritance < Neo::Koan
 
   def test_subclasses_can_modify_existing_behavior
     chico = Chihuahua.new("Chico")
-    assert_equal __, chico.bark
+    assert_equal "yip", chico.bark
 
     fido = Dog.new("Fido")
     assert_equal "WOOF", fido.bark
