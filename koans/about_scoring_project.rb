@@ -44,31 +44,31 @@ def score(dice)
   fives = dice.select {|item| item == 5}
   sixes = dice.select {|item| item == 6}
 
-  if ones.length == 3
+  if ones.length >= 3
     sum += 1000
+    if ones.length > 3
+        sum += (ones.length - 3) * 100
+    end
   end
-  if twos.length == 3
+  if twos.length >= 3
     sum += 100*2
   end
-  if threes.length == 3
+  if threes.length >= 3
     sum += 100*3
   end
-  if fours.length == 3
+  if fours.length >= 3
     sum += 100*4
   end
-  if fives.length == 3
+  if fives.length >= 3
     sum += 100*5
+    if fives.length > 3
+        sum += (fives.length - 3) * 50
+    end
   end
-  if sixes.length == 3
+  if sixes.length >= 3
     sum += 100*6
   end
-
-  if ones.length > 3
-      sum += (ones.length - 3) * 100
-  end
-  if ones.length > 5
-      sum += (ones.length - 3) * 50
-  end
+  
   if ones.length < 3
       sum += (ones.length) * 100
   end
