@@ -4,6 +4,13 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 #
 class DiceSet
 #   code ...
+attr_reader :values
+
+  def roll(number)
+    @values = []
+    (1..number).each { |count| @values << rand(1..6) }
+
+  end
 end
 
 class AboutDiceProject < Neo::Koan
