@@ -1,0 +1,9 @@
+Die Lisp Übung zur Vorlesung PR3 im WS17/18
+befindet sich in einem anderem REPO:
+https://github.com/1628574/PR3---Lisp.git
+Der Nutzer WolfSchramm wurde eingeladen.
+
+Gruppe:
+1622998 - Benjamin Schönke
+1628574 - Janneck Lange
+1627573 - Maximilian Stockbauer
