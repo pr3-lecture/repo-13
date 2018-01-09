@@ -1,6 +1,3 @@
-Da ich Probleme beim Hochladen mit MS VS 2017 habe, bitte im repo-01 nachgucken, was eine Zusammenarbeit war.
-
-
 # Aufgabe: Verschlüsselung in C
 
 Ihre Aufgabe besteht darin, ein C-Programm zu schreiben, dass Daten mit einem einfachen XOR-Algorithmus verschlüsseln kann.
